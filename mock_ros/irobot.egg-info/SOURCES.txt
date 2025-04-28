@@ -1,0 +1,14 @@
+setup.cfg
+setup.py
+irobot/__init__.py
+irobot/cli.py
+irobot/db_manager.py
+irobot/network.py
+irobot.egg-info/PKG-INFO
+irobot.egg-info/SOURCES.txt
+irobot.egg-info/dependency_links.txt
+irobot.egg-info/entry_points.txt
+irobot.egg-info/top_level.txt
+irobot/nodes_py/__init__.py
+irobot/nodes_py/listener.py
+irobot/nodes_py/talker.py

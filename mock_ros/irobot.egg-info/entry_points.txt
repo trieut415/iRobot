@@ -1,0 +1,3 @@
+[console_scripts]
+iRobot = irobot.cli:main
+
