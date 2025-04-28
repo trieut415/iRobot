@@ -54,12 +54,12 @@ python -m irobot.cli run nodes_py listener --topic chatter
 ```
 ### Node Arguments
 - talker
---topic (default: chatter)
---message (default: "Hello, ROS!")
---rate (Hz, default: 1.0)
+    -topic (default: chatter)
+    -message (default: "Hello, ROS!")
+    -rate (Hz, default: 1.0)
 
 - listener
---topic (default: chatter)
+    -topic (default: chatter)
 
 Project Structure
 ```markdown
