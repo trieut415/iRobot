@@ -11,7 +11,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        python-version: [3.8, 3.9, 3.11, 3.12]
+        python-version: [3.8, 3.9, 3.10, 3.11, 3.12]
 
     steps:
       - name: Check out repository
@@ -26,20 +26,18 @@ jobs:
         uses: actions/cache@v3
         with:
           path: ~/.cache/pip
-          key: ${{ runner.os }}-pip-${{ hashFiles('**/requirements.txt') }}
+          # your requirements.txt lives in mock_ros/
+          key: ${{ runner.os }}-pip-${{ hashFiles('mock_ros/requirements.txt') }}
           restore-keys: |
             ${{ runner.os }}-pip-
 
       - name: Install dependencies
-        # <— change this path if your setup.py sits somewhere else
-        working-directory: ./iRobot  
+        working-directory: mock_ros
         run: |
           python -m pip install --upgrade pip
           pip install -e .
           pip install pytest
 
       - name: Run tests
-        run: |
-          # if your tests/imports assume irobot is on PYTHONPATH,
-          # you may need to cd back to repo root or ensure PYTHONPATH includes ./iRobot
-          pytest -q
+        working-directory: mock_ros
+        run: pytest -q
