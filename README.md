@@ -62,28 +62,6 @@ python -m irobot.cli run nodes_py listener --topic chatter
 - **listener**
   - `--topic`   (default: `chatter`)
 
-Project Structure
-```markdown
-mock_ros/
-├── setup.cfg
-├── setup.py
-├── requirements.txt
-├── README.md
-├── irobot/
-│   ├── __init__.py
-│   ├── cli.py
-│   ├── db_manager.py
-│   ├── network.py
-│   └── nodes_py/
-│       ├── __init__.py
-│       ├── talker.py
-│       └── listener.py
-└── tests/
-    ├── conftest.py
-    ├── test_cli.py
-    ├── test_db_manager.py
-    └── test_network.py
-```
 ## Testing
 Run the pytest suite:
 
