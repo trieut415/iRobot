@@ -23,7 +23,7 @@ iRobot is a lightweight, pure-Python “mock ROS” framework that implements a 
 ## Installation
 ```bash
 # Clone your repo locally
-git clone <your-repo-url> mock_ros
+git clone https://github.com/trieut415/iRobot.git mock_ros
 cd mock_ros
 
 # Create and activate a virtualenv (optional but recommended)
